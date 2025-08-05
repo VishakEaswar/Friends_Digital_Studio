@@ -1,0 +1,76 @@
+{
+  "ourproduct": [
+    {
+      "id": 1,
+      "name": "Custom Key Chain ",
+      "description": "This is a great product.",
+      "price": "₹199.00",
+      "discountPercent": 10,
+      "gstPercent": 18,
+      "image": "https://imgcdn.floweraura.com/love-photo-keyring-9989237gf-CCC.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Mini Photo Frames",
+      "description": "Another awesome product.",
+      "price": "₹599.00",
+      "discountPercent": 15,
+      "gstPercent": 18,
+      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/normal-photo-frame/g/j/z/personalized-customized-gift-best-friends-reel-photo-collage-original-imagv9mgdzyydkqu.jpeg?q=70"
+    },
+    {
+      "id": 3,
+      "name": "Customized Coffee Mug ",
+      "description": "You will love this product.",
+      "price": "₹500.00",
+      "discountPercent": 20,
+      "gstPercent": 18,
+      "image": "https://giftcart.com/cdn/shop/files/CM08GBGT53750-F2_700x.jpg?v=1720077295"
+    },
+    {
+      "id": 4,
+      "name": "Customised frames with LED ",
+      "description": "Best seller product.",
+      "price": "₹999.00",
+      "discountPercent": 5,
+      "gstPercent": 18,
+      "image": "https://i.pinimg.com/736x/54/61/4c/54614c8a683ac4e69411157c8c0d3056.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Magic Mirror Photo Frame",
+      "description": "Best seller product.",
+      "price": "₹699.00",
+      "discountPercent": 0,
+      "gstPercent": 18,
+      "image": "https://www.onlinedelivery.in/images/detailed/33/kisiye-ozel-sihirli-ayna-yuvarlak-kiz-arkadasa-hediye-13900-67-B.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Large Photo Frame ",
+      "description": "Best seller product.",
+      "price": "₹800.00",
+      "discountPercent": 0,
+      "gstPercent": 18,
+      "image": "https://5.imimg.com/data5/EW/MR/MY-12468275/wooden-frame-1000x1000.jpg"
+    }
+  ],
+  "images": [
+    {
+      "id": 1,
+      "url": "https://www.focuzstudios.in/wp-content/uploads/2015/03/Top-10-Candid-Wedding-Photographers-in-Chennai-20.jpg"
+    },
+    {
+      "id": 2,
+      "url": "https://blog.venuelook.com/wp-content/uploads/2016/02/h17featured.jpg"
+    },
+    {
+      "id": 3,
+      "url": "https://i.pinimg.com/originals/5f/0f/ab/5f0fabcb1f74f276860ba3a4260f00bd.jpg"
+    },
+    {
+      "id": 4,
+      "url": "https://tse3.mm.bing.net/th/id/OIP.jdVQ8pQPv6mc6tLnJRj-hQHaCv?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+    }
+  ]
+}
