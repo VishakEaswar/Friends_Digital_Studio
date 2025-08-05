@@ -16,10 +16,11 @@ const AboutPage = () => {
         background: "#e5f2f5ff",
         borderBottomLeftRadius: "24px",
         borderBottomRightRadius: "24px",
-        mt: 4,
-        px: { xs: 2, sm: 4, md: 8 },
-        py: { xs: 4, md: 6 },
+        // mt: 4,
+        // px: { xs: 2, sm: 4, md: 8 },
+        // py: { xs: 4, md: 6 },
         width: "100%",
+
       }}
     >
       <Typography
