@@ -17,39 +17,42 @@ const ImageSlider = ({ images, children }) => {
 
   return (
     <Box
-      sx={{
-        position: 'relative',
-        width: '100%',
-        height: {
-          xs: '100vh',
-          sm: '90vh',
-          md: '90vh',
-          lg: '100vh',
-        },
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        overflow: 'hidden',
-        boxShadow: 3,
-        bgcolor: '#f5f5f5',
-      }}
-    >
+  sx={{
+    position: 'relative',
+    width: '100%',
+    minHeight: {
+      xs: '100dvh',
+      sm: '90vh',
+      md: '90vh',
+      lg: '100vh',
+    },
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    overflow: 'hidden',
+    boxShadow: 3,
+    bgcolor: '#f5f5f5',
+  }}
+>
+
       {/* Background Image */}
-      <Box
-        component="img"
-        src={images[current]}
-        alt={`slide-${current}`}
-        sx={{
-          width: '100%',
-          height: '100%',
-          objectFit: 'cover',
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          zIndex: 1,
-          transition: 'opacity 0.5s ease-in-out',
-        }}
-      />
+     <Box
+  component="img"
+  src={images[current]}
+  alt={`slide-${current}`}
+  sx={{
+    width: '100%',
+    height: '100%',
+    objectFit: 'cover',
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    zIndex: 1,
+    transition: 'opacity 0.5s ease-in-out',
+    display: 'block',
+  }}
+/>
+
 
       {/* Overlay */}
       <Box
