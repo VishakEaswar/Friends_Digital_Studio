@@ -9,7 +9,7 @@
   "preview": "vite preview",
   "lint": "eslint .",
   "predeploy": "npm run build",
-  "deploy": "gh-pages -d build",
+  "deploy": "gh-pages -d dist",
   "json-server": "json-server --watch ./src/products.json --port 3001"
 },
 
