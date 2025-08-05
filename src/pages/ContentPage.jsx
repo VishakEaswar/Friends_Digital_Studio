@@ -14,14 +14,15 @@ import axios from 'axios';
 
 const ProductSlider = ({ products }) => {
   const theme = useTheme();
-  const isXs = useMediaQuery(theme.breakpoints.down('sm'));
-  const isSm = useMediaQuery(theme.breakpoints.between('sm', 'md'));
-  const isMd = useMediaQuery(theme.breakpoints.between('md', 'lg'));
-  const isLg = useMediaQuery(theme.breakpoints.up('lg'));
+  const isXs = useMediaQuery(theme.breakpoints.down('sm'));   // <600px
+  const isSm = useMediaQuery(theme.breakpoints.between('sm', 'md')); // 600–900
+  const isMd = useMediaQuery(theme.breakpoints.between('md', 'lg')); // 900–1200
+  const isLg = useMediaQuery(theme.breakpoints.up('lg'));     // >1200px
 
   const [start, setStart] = useState(0);
   const total = products.length;
 
+  // Determine how many products to show
   let visibleCount = 1;
   if (isSm) visibleCount = 2;
   else if (isMd) visibleCount = 3;
@@ -43,22 +44,30 @@ const ProductSlider = ({ products }) => {
 
   return (
     <Box sx={{ px: { xs: 1, sm: 2, md: 4 }, py: 2, width: '100%' }}>
-      <Box
+      <Grid
+        container
+        spacing={2}
+        justifyContent="center"
+        wrap="wrap"
         sx={{
-          display: 'flex',
-          gap: 2,
-          overflowX: isXs ? 'auto' : 'visible',
+          flexWrap: { xs: 'nowrap', sm: 'wrap' },
+          overflowX: { xs: 'auto', sm: 'visible' },
+          WebkitOverflowScrolling: 'touch',
           scrollbarWidth: 'none',
-          '&::-webkit-scrollbar': { display: 'none' },
+          '&::-webkit-scrollbar': { display: 'none' }
         }}
       >
         {visibleProducts.map((product, idx) => (
-          <Box
+          <Grid
+            item
             key={product.id + '-' + idx}
+            xs={10}
+            sm={6}
+            md={4}
+            lg={3}
             sx={{
-              minWidth: isXs ? 260 : 'auto',
               flexShrink: 0,
-              width: isXs ? '80%' : 'auto',
+              minWidth: { xs: 260, sm: 'auto' }
             }}
           >
             <Card
@@ -90,7 +99,7 @@ const ProductSlider = ({ products }) => {
                   {product.description}
                 </Typography>
 
-                {/* Pricing */}
+                {/* Price Section */}
                 <Box sx={{ mb: 2 }}>
                   {(() => {
                     const price = parseFloat((product.price || '').replace('₹', '')) || 0;
@@ -120,7 +129,10 @@ const ProductSlider = ({ products }) => {
                         <Typography variant="body2" color="text.secondary">
                           GST: {gst}% (+₹{gstAmount.toFixed(2)})
                         </Typography>
-                        <Typography variant="subtitle1" sx={{ fontWeight: 700, color: '#388e3c' }}>
+                        <Typography
+                          variant="subtitle1"
+                          sx={{ fontWeight: 700, color: '#388e3c' }}
+                        >
                           Final Price: ₹{finalPrice.toFixed(2)}
                         </Typography>
                       </>
@@ -135,9 +147,9 @@ const ProductSlider = ({ products }) => {
                 </Box>
               </CardContent>
             </Card>
-          </Box>
+          </Grid>
         ))}
-      </Box>
+      </Grid>
     </Box>
   );
 };
